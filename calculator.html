@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        .cal-bg {
+            background: linear-gradient(45deg, orange, orange, black, black);
+            height: 100vh;
+        }
+        
+        .display {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row cal-bg">
+            <div class="col-lg-4 mx-auto">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h6 class="text-center">CASIO</h6>
+                        <input type="text" readonly class="display badge-success" id="display">
+                        <table class="btn-display table table-responsive table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td><input type="button" value="C" onclick="clr()" class="form-control ml-2"></td>
+                                    <td><input type="button" value="%" onclick="math('%')" class="form-control ml-4"></td>
+                                    <td><input type="button" value="&#8730;" onclick="squareRoot()" class="form-control ml-4"></td>
+                                    <td><input type="button" value="&#8731;" onclick="cubeRoot()" class="form-control ml-4"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="+" onclick="math('+')" class="form-control ml-2"></td>
+                                    <td><input type="button" value="7" onclick="math('7')" class="form-control ml-4"></td>
+                                    <td><input type="button" value="8" onclick="math('8')" class="form-control ml-4"></td>
+                                    <td><input type="button" value="9" onclick="math('9')" class="form-control ml-4"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="*" onclick="math('*')" class="form-control ml-2"></td>
+                                    <td><input type="button" value="4" onclick="math('4')" class="form-control ml-4"></td>
+                                    <td><input type="button" value="5" onclick="math('5')" class="form-control ml-4"></td>
+                                    <td><input type="button" value="6" onclick="math('6')" class="form-control ml-4"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="-" onclick="math('-')" class="form-control ml-2"></td>
+                                    <td><input type="button" value="3" onclick="math('3')" class="form-control ml-4"></td>
+                                    <td><input type="button" value="2" onclick="math('2')" class="form-control ml-4"></td>
+                                    <td><input type="button" value="1" onclick="math('1')" class="form-control ml-4"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="/" onclick="math('/')" class="form-control ml-2"></td>
+                                    <td><input type="button" value="." onclick="math('.')" class="form-control ml-4"></td>
+                                    <td><input type="button" value="0" onclick="math('0')" class="form-control ml-4"></td>
+                                    <td><input type="button" value="00" onclick="math('00')" class="form-control ml-4"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" value="&#9650; &#178;" onclick="sQuare()" class="form-control ml-2"></td>
+                                    <td><input type="button" value="&#9650; &#179;" onclick="cUbe()" class="form-control ml-4"></td>
+                                    <td><input type="button" value="&larr;" onclick="back()" class="form-control ml-4"></td>
+                                    <td><input type="button" value="&equals;" onclick="equal()" class="form-control ml-4"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js code -->
+    <script src="calclulator.js"></script>
+</body>
+
+</html>
